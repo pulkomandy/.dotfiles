@@ -1,0 +1,13 @@
+BorderSizeX = 3
+BorderSizeY = 3
+TitleBarHeight = 16
+
+MenuFontNameXft="sans-serif:size=8"
+TitleFontNameXft="sans-serif:size=8"
+NormalTaskBarFontNameXft="sans-serif:size=8"
+ActiveTaskBarFontNameXft="sans-serif:size=8"
+ToolTipFontNameXft="sans-serif:size=8"
+ClockFontNameXft="sans-serif:size=8"
+ListBoxFontNameXft="sans-serif:size=8"
+QuickSwitchFontNameXft="sans-serif:size=8"
+StatusFontNameXft="sans-serif:size=8"
