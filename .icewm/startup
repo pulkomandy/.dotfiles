@@ -1,1 +1,5 @@
+#!/bin/sh
+xscreensaver -no-splash &
+numlockx on &
 icedove &
+pidgin &
