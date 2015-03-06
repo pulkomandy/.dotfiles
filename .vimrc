@@ -26,8 +26,8 @@ filetype indent plugin on
 
 " CTags autocompletion menu
 :set wildmenu							"affiche le menu
-:set wildmode=list:longest,list:full	"affiche toutes les possibilités
-:set wildignore=*.o,*.r,*.so,*.sl,*.tar,*.tgz	"ignorer certains types de fichiers pour la complétion des includes
+:set wildmode=list:longest,list:full	"affiche toutes les possibilitÃ©s
+:set wildignore=*.o,*.r,*.so,*.sl,*.tar,*.tgz	"ignorer certains types de fichiers pour la complÃ©tion des includes
 
 map <C-F12> :!ctags -R --c-types=+p --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
 set completeopt=menu
@@ -47,3 +47,9 @@ set autowrite
 au quickFixCmdPost make :cw
 
 set autoread
+
+" airline cfg
+set laststatus=2
+set encoding=utf-8
+setglobal fileencoding=utf-8
+let g:airline_powerline_fonts=1
