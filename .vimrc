@@ -33,8 +33,6 @@ map <C-F12> :!ctags -R --c-types=+p --c++-kinds=+p --fields=+iaS --extra=+q .<CR
 set completeopt=menu
 let OmniCpp_SelectFirstItem = 2
 
-autocmd QuickFixCmdPost make cw
-
 let NERDTreeShowHidden=0
 map <C-O> :NERDTreeToggle<CR>
 
@@ -43,10 +41,12 @@ set colorcolumn=80
 set shell=/bin/bash
 
 command Todo execute 'silent lgrep -nr TODO *'|lw|redraw!
-set autowrite
-au quickFixCmdPost make :cw
 
+set autowrite
 set autoread
+au quickFixCmdPost make :cw
+set switchbuf=newtab,usetab
+
 
 " airline cfg
 set laststatus=2
