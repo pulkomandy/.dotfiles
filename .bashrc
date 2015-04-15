@@ -95,3 +95,9 @@ function exitstatus {
 }
 
 PROMPT_COMMAND=exitstatus
+
+shopt -s globstar
+shopt -s autocd
+shopt -s cdspell
+shopt -s dirspell
+
