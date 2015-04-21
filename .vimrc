@@ -1,38 +1,39 @@
-set nocp
+:set nocp
 
-set mousemodel=popup
-set number
-set mouse=a "enable mouse features
-set backspace=ident,eol,start
+:set mousemodel=popup
+:set number
+:set mouse=a "enable mouse features
+set backspace=indent,eol,start
 
-set tabstop=4 
-set sw=4 
-set smarttab
-set cindent
-syntax enable
-set showmatch
+:set tabstop=4 
+:set sw=4 
+:set smarttab
+:set cindent
+let mysyntaxfile='~/.vim/doxygen_load.vim' 
+:syntax enable
+:set showmatch
 filetype indent plugin on
 
-set titlestring=%t%M "set xterm title
-set title
-set guifont=Monospace\ 8
-set t_Co=256 " 256 colors in terminal
-colorscheme summerfruit256
+:set titlestring=%t%M "set xterm title
+:set title
+:set guifont=Monospace\ 8
+:set t_Co=256 " 256 colors in terminal
+:colorscheme summerfruit256
 
-set foldcolumn=4
-set fdm=syntax
-set foldlevelstart=99
+:set foldcolumn=4
+:set fdm=syntax
+:set foldlevelstart=99
 
 " search
-set hlsearch
-set incsearch "incremental search
-set ignorecase
-set smartcase
+:set hlsearch
+:set incsearch "incremental search
+:set ignorecase
+:set smartcase
 
 " CTags autocompletion menu
-set wildmenu							"affiche le menu
-set wildmode=list:longest,list:full	"affiche toutes les possibilités
-set wildignore=*.o,*.r,*.so,*.sl,*.tar,*.tgz	"ignorer certains types de fichiers pour la complétion des includes
+:set wildmenu							"affiche le menu
+:set wildmode=list:longest,list:full	"affiche toutes les possibilités
+:set wildignore=*.o,*.r,*.so,*.sl,*.tar,*.tgz	"ignorer certains types de fichiers pour la complétion des includes
 map <C-F12> :!ctags -R --c-types=+p --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
 set completeopt=menu
 let OmniCpp_SelectFirstItem = 2
@@ -41,7 +42,7 @@ let OmniCpp_SelectFirstItem = 2
 let NERDTreeShowHidden=0
 map <C-O> :NERDTreeToggle<CR>
 
-set colorcolumn=80
+set colorcolumn=100
 
 set shell=/bin/bash
 
@@ -58,3 +59,6 @@ set laststatus=2
 set encoding=utf-8
 setglobal fileencoding=utf-8
 let g:airline_powerline_fonts=1
+
+" Mark tabs
+set list listchars=tab:»\ ,trail:·
