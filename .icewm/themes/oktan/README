@@ -1,0 +1,91 @@
+
+ Oktan 
+°°°°°°°°      Christian W. Zuckschwerdt  <zany@triq.net>  2000-10-20
+
+IceWM Theme
+
+
+°[ What is special about this theme? ]°
+
+Basicly it's a low-color theme. It defaults to use only 8 different
+colors. Six grey-scale values one yellow one blue.
+But the looks are pretty clean and fresh so you might want to use it on
+your oh-so-fat 32-bit (16,7 Mio.) colored box. There are alternate themes
+included that are a bit more colorful (with the menus and such).
+
+
+°[ Features in this theme ]°
+
+ ° uses just eight colors:
+
+   $ cat *xpm |grep 'c #' |sort +2 |uniq -f 2  
+
+   "#      c #333333",
+   "$      c #666666",
+   "#      c #999999",
+   "%      c #CCCCCC",
+   "+      c #EEEEEE",
+   ".      c #FFFFFF",
+   "Y      c #FFFF00",
+   "*      c #8C8CCD",
+
+ ° clean settings	: default.theme
+ ° strictly 8 colors	: strict.theme
+ ° with rollup button	: winshade.theme
+ ° colorful with	: colorful.theme
+
+ ° Netscape XResources included
+   to use enter
+  xrdb -merge netscape.Xdefaults
+   and restart netscape.
+
+ ° Clean Background Tile:  xv -root -quit oktan-bg.xpm
+ ° Oktan Logo Background:  xv -root -quit oktan-1024x768.xpm
+                                       (or 800x600, 1280x1024)
+ ° Recommended GTK theme: minEgtk
+
+
+°[ Why the name? ]°
+
+As you were taught in chemistry class the octane molecule looks something
+like:
+
+     H  H  H  H  H  H  H  H
+     |  |  |  |  |  |  |  |
+  H--C--C--C--C--C--C--C--C--H
+     |  |  |  |  |  |  |  |
+     H  H  H  H  H  H  H  H
+
+see? Eight carbon atoms... thats 'C' like in color... you get it.
+
+( To be precise, our octane (which is part of gasoline) is an
+  isooctane. It's named 2,2,4-Trimethylpentan: )
+
+   C
+    \
+ C - C - C
+    /
+   C
+    \
+     C - C
+    /
+   C
+
+And no, it's not a reference to OkTAN, the swedish band which
+makes music in a combination between 666 and Scooter...
+
+
+°[ Credits ]°
+
+Buttons are (heavily) based on
+ mechasan theme by Pal Palocz <palocz.pal@mail.deltav.hu>
+
+Providing me with (shitty 8-bit only) Unix-Workstations
+ ARBI  C.v.O. U of Oldenburg  http://www.informatik.uni-oldenburg.de/
+
+
+°[ Feedback ]°
+
+Author: Christian W. Zuckschwerdt  <zany@triq.net>  2000-10-20
+Site: http://triq.net/
+

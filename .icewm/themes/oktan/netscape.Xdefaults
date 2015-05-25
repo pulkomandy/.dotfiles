@@ -1,0 +1,23 @@
+Netscape.TopLevelShell*background: #EEEEEE
+Netscape.TopLevelShell*foreground: #333333
+Netscape.TopLevelShell*fontList: -*-lucida-medium-r-normal-*-*-100-*-*-p-*-*
+! -*-helvetica-medium-r-normal-*-*-80-*-*-p-*-*
+
+Netscape.TopLevelShell*urlBarMainForm.urlComboBox.Text*background: #CCCCCC
+Netscape.TopLevelShell*urlBarMainForm.urlComboBox.Text*foreground: blue4
+
+Netscape.TopLevelShell*urlBarMainForm.urlComboBox.ComboBoxMenuShell.ComboBoxRowColumn.ListSW*background: #CCCCCC
+
+Netscape.TopLevelShell*selectForeground:                      black
+Netscape.TopLevelShell*selectBackground:                      orange
+
+!won't work
+!Netscape.TopLevelShell*defaultForeground:                     #000000
+!Netscape.TopLevelShell*defaultBackground:                     #EEEEEE
+
+!dark:
+!Netscape*fontList: lucidasans-10
+!Netscape*XmLGrid*fontList: lucidasans-10
+!Netscape*foreground: rgb:ce/e0/ea
+!Netscape*background: rgb:4/4/38
+

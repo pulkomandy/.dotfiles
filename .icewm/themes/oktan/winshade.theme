@@ -1,0 +1,110 @@
+ThemeDescription="oktan"
+ThemeAuthor="Christian W. Zuckschwerdt <zany@triq.net>"
+Look=metal
+
+# title buttons
+
+TitleButtonsSupported="xmirs"
+TitleButtonsLeft="s"
+TitleButtonsRight="xmir"
+
+# border & title bar
+
+TitleBarHeight=18
+BorderSizeX=4
+BorderSizeY=4
+CornerSizeX=16
+CornerSizeY=16
+DlgBorderSizeX=2
+DlgBorderSizeY=2
+
+# borders
+
+ColorNormalBorder="#CCCCCC"
+ColorActiveBorder="#999999"
+
+# titlebar
+
+ColorActiveTitleBar="#CCCCCC"
+ColorNormalTitleBar="#EEEEEE"
+ColorActiveTitleBarText="#333333"
+ColorNormalTitleBarText="#999999"
+
+# buttons
+
+ColorNormalButton="#CCCCCC"
+ColorActiveButton="#EEEEEE"
+
+# dialog
+
+ColorDialog="#EEEEEE"
+
+# menus
+
+ColorNormalMenu="#EEEEEE"
+ColorActiveMenuItem="#666666"
+ColorNormalMenuItemText="#333333"
+ColorActiveMenuItemText="#EEEEEE"
+ColorDisabledMenuItemText="999999"
+
+# move / size indicator
+
+ColorMoveSizeStatus="#EEEEEE"
+ColorMoveSizeStatusText="#333333"
+
+# tool tip
+
+ColorToolTip="#333333"
+ColorToolTipText="#FFFFFF"
+
+# taskbar
+
+ColorDefaultTaskBar="#EEEEEE"
+ColorNormalTaskBarApp="#EEEEEE"
+ColorNormalTaskBarAppText="#333333"
+ColorActiveTaskBarApp="#CCCCCC"
+ColorActiveTaskBarAppText="#333333"
+ColorMinimizedTaskBarApp="#EEEEEE"
+ColorMinimizedTaskBarAppText="#999999"
+
+# listbox
+
+ColorListBox="#EEEEEE"
+ColorListBoxText="#333333"
+ColorListBoxSelection="#666666"
+ColorListBoxSelectionText="#EEEEEE"
+
+# input
+
+ColorInput="#CCCCCC"
+ColorInputText="#000000"
+ColorInputSelection="#FFFF00"
+ColorInputSelectionText="#FFFFFF"
+
+# monitors
+
+TaskBarClockLeds=0
+ColorClock="#CCCCCC"
+ColorClockText="#333333"
+
+ColorCPUStatusUser="#0000FF"
+ColorCPUStatusSystem="#FF0000"
+ColorCPUStatusNice="#00FF00"
+ColorCPUStatusIdle="#CCCCCC"
+ColorNetSend="#00FF00"
+ColorNetReceive="#FF0000"
+ColorNetIdle="#CCCCCC"
+
+# Desktop background color
+DesktopBackgroundColor="#707888"
+
+# Desktop background image
+#DesktopBackgroundImage="oktan-1024x768.xpm"
+
+# Display desktop background centered and not tiled
+DesktopBackgroundCenter=1 # 0 / 1
+
+# don't you just love lucida, too?
+TitleFontName="-*-lucida-medium-r-normal-*-*-100-*-*-p-*-*"
+MenuFontName="-*-lucida-medium-r-normal-*-*-100-*-*-p-*-*"
+ListBoxFontName="-*-lucida-medium-r-normal-*-*-100-*-*-p-*-*"
