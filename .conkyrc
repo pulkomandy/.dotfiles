@@ -3,8 +3,9 @@ default_bar_size 200 6
 gap_x 48
 gap_y 0
 own_window true
-own_window_type panel
-disable_auto_reload on
+own_window_type desktop
+own_window_hints undecorated,above,sticky,skip_taskbar,skip_pager
+disable_auto_reload true
 own_window_transparent true
 minimum_size 400 8
 
