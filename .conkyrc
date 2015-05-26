@@ -1,0 +1,13 @@
+alignment tr
+default_bar_size 200 6
+gap_x 48
+gap_y 0
+own_window true
+own_window_type panel
+disable_auto_reload on
+own_window_transparent true
+minimum_size 400 8
+
+TEXT
+cpu${cpubar cpu1 6,50}${cpubar cpu2 6,50}${cpubar cpu3 6,50}${cpubar cpu4 6,50} mem${membar}
+fs ${fs_bar /} ${diskio} ${if_up eth0}${addr eth0}${else}OFFLINE${endif} ${addr eth1}
