@@ -83,21 +83,36 @@ function exitstatus {
     color=31 # red
   fi
 
-  PS1='\[\033[01;'$color'm\]\w\[\033[00m\]\$ '
+  PS1='${debian_chroot:+($debian_chroot)}\[\033[01;'$color'm\]\w\[\033[0m\]\$\[\033[33m\] '
   # If this is an xterm set the title to user@host:dir
   case "$TERM" in
     xterm*|rxvt*)
-	  PS1="\[\e]0;\w\a\]$PS1"
+	  PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\w\a\]$PS1"
       ;;
     *)
       ;;
   esac
+
+  preexec_interactive=1
 }
 
+# The prompt leaves the command line in blue, but we hook at preexec to reset it to the default color.
+preexec () {
+    #[ -n "$COMP_LINE" ] && return  # do nothing if completing
+    #[ "$BASH_COMMAND" = "$PROMPT_COMMAND" ] && return # don't cause a preexec for $PROMPT_COMMAND
+    [ "$preexec_interactive" = "1" ] || return
+    echo -ne '\e[0m'
+    preexec_interactive=0
+}
+trap 'preexec' DEBUG
+
+
 PROMPT_COMMAND=exitstatus
+
+export EDITOR=vim
 
 shopt -s globstar
 shopt -s autocd
 shopt -s cdspell
 shopt -s dirspell
-
+shopt -s nocaseglob
