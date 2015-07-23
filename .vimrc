@@ -43,6 +43,8 @@ let OmniCpp_SelectFirstItem = 2
 
 " nerd tree and tagbar
 let NERDTreeShowHidden=0
+let NERDTreeMouseMode=3
+
 map <C-O> :NERDTreeToggle<CR>
 map <C-T> :TagbarToggle<CR>
 
@@ -59,7 +61,9 @@ autocmd VimEnter * wincmd k
 autocmd VimEnter * wincmd L
 autocmd VimEnter * wincmd w
 
-let g:tagbar_singleclick = 1
+let g:tagbar_singleclick = 1 " Single click jumps to tag
+let g:tagbar_sort = 0 " Do not sort tags by filename, keep in file order.
+let g:tagbar_compact = 1 " I know that F1 and ? are for help, thanks!
 
 " Exit when only nerdtree is left open
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
@@ -69,13 +73,17 @@ set colorcolumn=100
 
 set shell=/bin/bash
 
-command Todo execute 'silent lgrep -nr TODO *'|lw|redraw!
+command Todo execute 'silent lgrep -nr TODO *'
 
 " :make
 set autowrite
 set autoread
 au quickFixCmdPost make :cw
-set switchbuf=newtab,usetab
+
+" Auto-open result window after :grep
+au quickFixCmdPost grep :cw
+
+set switchbuf=useopen
 
 " airline cfg
 set laststatus=2
@@ -84,5 +92,16 @@ setglobal fileencoding=utf-8
 let g:airline_powerline_fonts=1
 let g:airline#extensions#tagbar#enabled = 1
 
-" Mark tabs
+" Mark tabs, trailing whitespace and non-breakable space
 set list listchars=tab:→\ ,trail:·,nbsp:¬
+
+" Colorize parenthesis
+let g:rainbow_active = 1
+let basic5 = ['DarkCyan','DarkMagenta','DarkGreen','DarkBlue','DarkRed']
+let separators = ',\|;'
+let operators = '&& \||| \|== \|!= \|>= \|<= \|+ \|- \|/ \|* \|< \|> '
+let g:rainbow_conf = {
+\   'operators': '_'.separators.'\|'.operators.'_',
+\   'parentheses': ['start=/(/ end=/)/'],
+\   'ctermfgs': basic5
+\}
