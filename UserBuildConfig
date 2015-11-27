@@ -1,0 +1,13 @@
+
+HAIKU_INSTALL_DIR = /Haiku-TEST ;
+
+SetConfigVar DEBUG : HAIKU_TOP src kits network libnetapi : 1 : global ;
+SetConfigVar DEBUG : HAIKU_TOP src tools get_package_dependencies : 1 : global ;
+SetConfigVar DEBUG : HAIKU_TOP src build libpackage : 1 : global ;
+
+AddHaikuImagePackages dejavu git haikuporter vim ;
+AddHaikuImagePackages DevelopmentMin ;
+
+HAIKU_ROOT_USER_NAME = pulkomandy ;
+HAIKU_ROOT_USER_REAL_NAME = "PulkoMandy" ;
+HAIKU_IMAGE_HOST_NAME = kitt ;

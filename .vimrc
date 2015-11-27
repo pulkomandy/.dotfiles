@@ -19,7 +19,7 @@ filetype indent plugin on
 
 :set titlestring=%t%M "set xterm title
 :set title
-:set guifont=Monospace\ 8
+":set guifont=Monospace\ 8
 :set t_Co=256 " 256 colors in terminal
 :colorscheme summerfruit256
 
@@ -41,26 +41,6 @@ map <C-F12> :!ctags -R --c-types=+p --c++-kinds=+p --fields=+iaS --extra=+q .<CR
 set completeopt=menu
 let OmniCpp_SelectFirstItem = 2
 
-" nerd tree and tagbar
-let NERDTreeShowHidden=0
-let NERDTreeMouseMode=3
-
-map <C-O> :NERDTreeToggle<CR>
-map <C-T> :TagbarToggle<CR>
-
-autocmd VimEnter * NERDTree
-autocmd BufEnter * NERDTreeMirror
-
-autocmd VimEnter * nested :call tagbar#autoopen(1)
-autocmd FileType * nested :call tagbar#autoopen(0)
-autocmd BufEnter * nested :call tagbar#autoopen(0)
-
-" Relayout nerdtree and tagbar in a single column...
-autocmd VimEnter * wincmd J
-autocmd VimEnter * wincmd k
-autocmd VimEnter * wincmd L
-autocmd VimEnter * wincmd w
-
 let g:tagbar_singleclick = 1 " Single click jumps to tag
 let g:tagbar_sort = 0 " Do not sort tags by filename, keep in file order.
 let g:tagbar_compact = 1 " I know that F1 and ? are for help, thanks!
@@ -68,8 +48,7 @@ let g:tagbar_compact = 1 " I know that F1 and ? are for help, thanks!
 " Exit when only nerdtree is left open
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
-set winwidth=110
-set colorcolumn=100
+set colorcolumn=80
 
 set shell=/bin/bash
 
