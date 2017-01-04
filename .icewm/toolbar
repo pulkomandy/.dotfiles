@@ -1,3 +1,4 @@
-prog "File Manager" pcmanfm pcmanfm
-prog "Terminal" xterm lxterminal
-prog "Web" iceweasel iceweasel
+prog "File Manager" /usr/share/icons/Tango/16x16/apps/file-manager.png pcmanfm
+prog "Terminal" xterm roxterm
+prog "Web" /usr/share/icons/hicolor/16x16/apps/vivaldi.png vivaldi
+prog "Vim" /usr/share/icons/hicolor/16x16/apps/vim.png gvim
