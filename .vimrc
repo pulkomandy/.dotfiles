@@ -8,21 +8,25 @@ execute pathogen#infect()
 :set mouse=a "enable mouse features
 set backspace=indent,eol,start
 
+" Indent with tabs, tabs are 4 space.
 :set tabstop=4
 :set sw=4
 :set smarttab
 :set cindent
+
 let mysyntaxfile='~/.vim/doxygen_load.vim'
 :syntax enable
-:set showmatch
+:set showmatch " highlight all search matches
 filetype indent plugin on
 
-:set titlestring=%t%M "set xterm title
+:set titlestring=%t%M "set xterm title to filename+modified indicator
 :set title
-":set guifont=Monospace\ 8
+:set guifont=Liberation\ Mono\ 7
 :set t_Co=256 " 256 colors in terminal
 :colorscheme summerfruit256
 
+" show 4 columns of folding indicators, unfold everything, create folds based
+" on syntax (C blocks, etc)
 :set foldcolumn=4
 :set fdm=syntax
 :set foldlevelstart=99
@@ -33,26 +37,16 @@ filetype indent plugin on
 :set ignorecase
 :set smartcase
 
-" CTags autocompletion menu
-:set wildmenu							"affiche le menu
-:set wildmode=list:longest,list:full	"affiche toutes les possibilités
-:set wildignore=*.o,*.r,*.so,*.sl,*.tar,*.tgz	"ignorer certains types de fichiers pour la complétion des includes
-map <C-F12> :!ctags -R --c-types=+p --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
-set completeopt=menu
-let OmniCpp_SelectFirstItem = 2
-
-let g:tagbar_singleclick = 1 " Single click jumps to tag
-let g:tagbar_sort = 0 " Do not sort tags by filename, keep in file order.
-let g:tagbar_compact = 1 " I know that F1 and ? are for help, thanks!
-
-" Exit when only nerdtree is left open
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
-
-set colorcolumn=80
+set colorcolumn=100 " your lines are too long!
+set updatetime=250 " fast update of git-gutter, youcompleteme errors, etc
 
 set shell=/bin/bash
 
 command Todo execute 'silent lgrep -nr TODO *'
+
+" ------------------------
+"  QUICKFIX
+" ------------------------
 
 " :make
 set autowrite
@@ -62,6 +56,7 @@ au quickFixCmdPost make :cw
 " Auto-open result window after :grep
 au quickFixCmdPost grep :cw
 
+" reuse open files when clicking in quickfix window
 set switchbuf=useopen
 
 " airline cfg
@@ -84,3 +79,12 @@ let g:rainbow_conf = {
 \   'parentheses': ['start=/(/ end=/)/'],
 \   'ctermfgs': basic5
 \}
+
+" Usable colors and signs for git gutter
+let g:gitgutter_override_sign_column_highlight = 0
+highlight SignColumn guibg=Black
+
+let g:gitgutter_sign_added = '►'
+let g:gitgutter_sign_modified = '◆'
+let g:gitgutter_sign_removed = '◀'
+let g:gitgutter_sign_modified_removed = '◆◀'
