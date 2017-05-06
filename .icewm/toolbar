@@ -1,4 +1,4 @@
-prog "File Manager" /usr/share/icons/Tango/16x16/apps/file-manager.png pcmanfm
-prog "Terminal" xterm roxterm
+prog "File Manager" /usr/share/icons/gnome/16x16/apps/file-manager.png gentoo
+prog "Terminal" /usr/share/icons/hicolor/16x16/apps/terminator.png terminator
 prog "Web" /usr/share/icons/hicolor/16x16/apps/vivaldi.png vivaldi
-prog "Vim" /usr/share/icons/hicolor/16x16/apps/vim.png gvim
+prog "Vim" /usr/share/icons/locolor/16x16/apps/gvim.png gvim
