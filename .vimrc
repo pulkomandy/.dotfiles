@@ -8,11 +8,12 @@ execute pathogen#infect()
 :set mouse=a "enable mouse features
 set backspace=indent,eol,start
 
-" Indent with tabs, tabs are 4 space.
+" Indent with spaces, tabs are 4 space.
 :set tabstop=4
 :set sw=4
 :set smarttab
 :set cindent
+:set et
 
 let mysyntaxfile='~/.vim/doxygen_load.vim'
 :syntax enable
@@ -25,19 +26,13 @@ filetype indent plugin on
 :set t_Co=256 " 256 colors in terminal
 :colorscheme summerfruit256
 
-" show 4 columns of folding indicators, unfold everything, create folds based
-" on syntax (C blocks, etc)
-:set foldcolumn=4
-:set fdm=syntax
-:set foldlevelstart=99
-
 " search
 :set hlsearch
 :set incsearch "incremental search
 :set ignorecase
 :set smartcase
 
-set colorcolumn=100 " your lines are too long!
+set colorcolumn=120 " your lines are too long!
 set updatetime=250 " fast update of git-gutter, youcompleteme errors, etc
 
 set shell=/bin/bash
@@ -88,3 +83,8 @@ let g:gitgutter_sign_added = '►'
 let g:gitgutter_sign_modified = '◆'
 let g:gitgutter_sign_removed = '◀'
 let g:gitgutter_sign_modified_removed = '◆◀'
+
+highlight DiffAdd    cterm=NONE ctermfg=NONE ctermbg=157
+highlight DiffDelete cterm=NONE ctermfg=NONE ctermbg=210
+highlight DiffChange cterm=NONE ctermfg=NONE ctermbg=254
+highlight DiffText   cterm=NONE ctermfg=NONE ctermbg=159
