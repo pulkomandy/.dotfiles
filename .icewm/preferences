@@ -1,7 +1,7 @@
 ShutdownCommand="/sbin/poweroff"
 RebootCommand="/sbin/reboot"
 LockCommand="xscreensaver-command -lock"
-ClockCommand="xterm -e calcurse"
+ClockCommand="xterm calcurse"
 
 WorkspaceNames="1","2","3","4","5","6"
 
@@ -26,3 +26,5 @@ KeySysWorkspace7TakeWin="Ctrl+Shift+F7"
 KeySysWorkspace8TakeWin="Ctrl+Shift+F8"
 KeySysWorkspace9TakeWin="Ctrl+Shift+F9"
 KeySysWorkspace10TakeWin="Ctrl+Shift+F10"
+
+PagerShowPreview=0

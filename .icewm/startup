@@ -1,8 +1,8 @@
 #!/bin/sh
-xrandr --output HDMI1 --auto --primary --output VGA1 --auto --left-of HDMI1
+xrandr --output HDMI-1 --auto --primary --output eDP-1 --auto --right-of HDMI-1
 xscreensaver -no-splash &
 numlockx on
-xset r rate 250 40
+#xset r rate 250 40
 conky &
-#icedove &
-#pidgin &
+dunst &
+thunderbird &

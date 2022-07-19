@@ -1,4 +1,6 @@
-prog "File Manager" /usr/share/icons/gnome/16x16/apps/file-manager.png gentoo
+prog "File Manager" /usr/share/icons/Adwaita/16x16/apps/system-file-manager-symbolic.symbolic.png pcmanfm
 prog "Terminal" /usr/share/icons/hicolor/16x16/apps/terminator.png terminator
 prog "Web" /usr/share/icons/hicolor/16x16/apps/vivaldi.png vivaldi
 prog "Vim" /usr/share/icons/locolor/16x16/apps/gvim.png gvim
+prog "yED" /home/adestugues/Tools/yed-3.20.1/icons/yed16.png java -jar /home/adestugues/Tools/yed-3.20.1/yed.jar
+prog "SpeedCrunch" /usr/share/pixmaps/speedcrunch.png speedcrunch
