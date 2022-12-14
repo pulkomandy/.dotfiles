@@ -8,12 +8,11 @@ execute pathogen#infect()
 :set mouse=a "enable mouse features
 set backspace=indent,eol,start
 
-" Indent with spaces, tabs are 4 space.
+" Indent with tabs, tabs are 4 space.
 :set tabstop=4
 :set sw=4
 :set smarttab
 :set cindent
-:set et
 
 let mysyntaxfile='~/.vim/doxygen_load.vim'
 :syntax enable
@@ -32,7 +31,7 @@ filetype indent plugin on
 :set ignorecase
 :set smartcase
 
-set colorcolumn=120 " your lines are too long!
+set colorcolumn=100 " your lines are too long!
 set updatetime=250 " fast update of git-gutter, youcompleteme errors, etc
 
 set shell=/bin/bash
@@ -84,7 +83,19 @@ let g:gitgutter_sign_modified = '◆'
 let g:gitgutter_sign_removed = '◀'
 let g:gitgutter_sign_modified_removed = '◆◀'
 
+" Tab completion in :e, etc: show a list of matching files
+set wildmode=list,full
+set wildmenu
+
+" Usable colors for vimdiff
 highlight DiffAdd    cterm=NONE ctermfg=NONE ctermbg=157
 highlight DiffDelete cterm=NONE ctermfg=NONE ctermbg=210
 highlight DiffChange cterm=NONE ctermfg=NONE ctermbg=254
 highlight DiffText   cterm=NONE ctermfg=NONE ctermbg=159
+
+" Configure YouCompleteMe for autocompletion
+let g:ycm_key_list_select_completion = ['Down'] " I use Tab for indentation not for completion
+let g:ycm_confirm_extra_conf = 0 " Do not ask before loading the extra conf file
+:highlight Pmenu ctermbg=gray guibg=gray ctermfg=black guifg=black " Nicer colors for the menu
+
+let mapleader = "œ"
