@@ -88,14 +88,28 @@ set wildmode=list,full
 set wildmenu
 
 " Usable colors for vimdiff
-highlight DiffAdd    cterm=NONE ctermfg=NONE ctermbg=157
-highlight DiffDelete cterm=NONE ctermfg=NONE ctermbg=210
-highlight DiffChange cterm=NONE ctermfg=NONE ctermbg=254
-highlight DiffText   cterm=NONE ctermfg=NONE ctermbg=159
+highlight DiffAdd    cterm=NONE ctermfg=NONE ctermbg=157 guibg=#CCFFCC
+highlight DiffDelete cterm=NONE ctermfg=NONE ctermbg=210 guibg=#FFCCCC
+highlight DiffChange cterm=NONE ctermfg=NONE ctermbg=254 guibg=#FFFFCC
+highlight DiffText   cterm=NONE ctermfg=NONE ctermbg=159 guibg=#CCCCFF
 
 " Configure YouCompleteMe for autocompletion
 let g:ycm_key_list_select_completion = ['Down'] " I use Tab for indentation not for completion
 let g:ycm_confirm_extra_conf = 0 " Do not ask before loading the extra conf file
 :highlight Pmenu ctermbg=gray guibg=gray ctermfg=black guifg=black " Nicer colors for the menu
 
+" Use that key as a "leader" key (mainly because I use the default one for something else)
 let mapleader = "œ"
+
+" Allow to type ":Man something" to open a manpage
+runtime ftplugin/man.vim
+
+" Spell checking, always enabled, show results with undercurls
+:set spell spelllang=en_us
+
+let &t_Cs = "\e[4:3m"
+let &t_Ce = "\e[4:0m"
+hi SpellBad   guisp=red    gui=undercurl guifg=NONE guibg=NONE ctermfg=NONE ctermbg=NONE term=underline cterm=undercurl ctermul=red
+hi SpellRare  guisp=blue   gui=undercurl guifg=NONE guibg=NONE ctermfg=NONE ctermbg=NONE term=underline cterm=undercurl ctermul=blue
+hi SpellLocal  guisp=cyan   gui=undercurl guifg=NONE guibg=NONE ctermfg=NONE ctermbg=NONE term=underline cterm=undercurl ctermul=cyan
+hi SpellCap   guisp=yellow gui=undercurl guifg=NONE guibg=NONE ctermfg=NONE ctermbg=NONE term=underline cterm=undercurl ctermul=yellow

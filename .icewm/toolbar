@@ -4,3 +4,4 @@ prog "Web" /usr/share/icons/hicolor/16x16/apps/vivaldi.png vivaldi
 prog "Vim" /usr/share/icons/locolor/16x16/apps/gvim.png gvim
 prog "yED" /home/adestugues/Tools/yed-3.20.1/icons/yed16.png java -jar /home/adestugues/Tools/yed-3.20.1/yed.jar
 prog "SpeedCrunch" /usr/share/pixmaps/speedcrunch.png speedcrunch
+prog "scrot" /usr/share/icons/Adwaita/16x16/devices/camera-photo-symbolic.symbolic.png scrot -s -e 'xclip -selection clipboard -t image/png -i $f ; rm $f'
