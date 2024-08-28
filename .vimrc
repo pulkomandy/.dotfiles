@@ -21,7 +21,7 @@ filetype indent plugin on
 
 :set titlestring=%t%M "set xterm title to filename+modified indicator
 :set title
-:set guifont=Liberation\ Mono\ 7
+:set guifont=Liberation\ Mono\ 9
 :set t_Co=256 " 256 colors in terminal
 :colorscheme summerfruit256
 

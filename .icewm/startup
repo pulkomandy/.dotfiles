@@ -1,8 +1,21 @@
 #!/bin/sh
-xrandr --output HDMI-1 --auto --primary --output eDP-1 --auto --right-of HDMI-1
+# Load all 3 displays
+xrandr --output eDP-1 --mode 1920x1080 --pos 0x0 --rotate normal --output HDMI-1 --primary --mode 1920x1080 --pos 1920x0 --rotate normal --output DP-1 --mode 1920x1080 --pos 3840x0 --rotate normal --output HDMI-2 --off
+# Start xscreensaver to allow locking the session
 xscreensaver -no-splash &
+# Set up a background image
+icewmbg
+# Enable numlock
 numlockx on
+# Protect numlock as I keep disabling it by accident: now you have to use shift+NumLock instead
+xmodmap -e 'keycode 77 = NoSymbol Num_Lock'
+# xset is done by a udev rule whenever a keyboard is connected
 #xset r rate 250 40
+# Show CPU usage stats and the like in a floating window
 conky &
+# Notification service
 dunst &
+# Start a few apps I'll probably want running anyways
 thunderbird &
+vivaldi &
+terminator &
